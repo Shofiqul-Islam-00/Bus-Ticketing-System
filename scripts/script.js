@@ -147,7 +147,7 @@ btn.addEventListener('click', function () {
         const discountedGrandTotal = grandTotalInitial - discountPrice;
         // console.log(discountedGrandTotal);
         setElementText('grand-total-price', discountedGrandTotal);
-        document.getElementById('apply-btn').classList.add('hidden')
+     
         document.getElementById('input-field').classList.add('hidden')
         // document.getElementById('apply-btn').disabled = true;
         // document.getElementById('input-field').disabled = true;
