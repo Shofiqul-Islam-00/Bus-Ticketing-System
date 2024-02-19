@@ -86,7 +86,17 @@ for (const element of targetElements) {
         const seatSelected = getElementValue('seat-count')
         // console.log(seatSelected)
 
-        
+        inputNumber.addEventListener('keyup', function (event) {
+            let inputNumberValue = event.target.value;
+            // console.log(inputNumberValue)
+            // console.log(typeof inputNumberValue)
+            if (inputNumberValue !== '' && !isNaN(inputNumberValue) && seatSelected >= 1) {
+                document.getElementById('next-btn').disabled = false;
+                document.getElementById('next-btn').addEventListener('click', function () {
+                    document.getElementById('number-input').value = '';
+                    document.getElementById('next-btn').disabled = true;
+                })
+            }
             else {
                 document.getElementById('next-btn').disabled = true;
             }
